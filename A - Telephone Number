@@ -1,0 +1,54 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define ld long double
+#define vec vector<ll>
+#define pll pair<ll,ll>
+#define fastread ios_base::sync_with_stdio(false); cin.tie(NULL);
+#define pb push_back
+#define mp make_pair
+#define fx first
+#define sx second
+#define inf 100000000000000
+#define minf -100000000000000
+#define maxi 100005
+int main()
+{
+    fastread;
+    ll tot,num,no,i,j,k,val;
+    char a[101];
+    cin>>k;
+   for(j=0;j<k;j++)
+    {
+    int f=0,indx=-1;
+    cin>>no;
+ 
+    for(i=0;i<no;i++)
+    {
+        cin>>a[i];
+ 
+        if(a[i]=='8' && f==0)
+        {
+            indx=i;
+            f=1;
+ 
+        }
+    }
+    if(indx==-1 || no<=10)
+    {
+        cout<<"NO"<<endl;
+    }
+    else
+    {
+        val=no-(indx+1);
+        if(val>=10)
+        {
+            cout<<"YES"<<endl;
+        }
+        else
+        {
+            cout<<"NO"<<endl;
+        }
+    }
+    }
+}
