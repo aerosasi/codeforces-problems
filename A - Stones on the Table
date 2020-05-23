@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+vector<long long int> v;
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+ 
+    long long int a[3],mi,ma,res,no,i,j,k,len;
+ 
+    cin>>j;
+    v.push_back(j);
+    mi=ma=j;
+    for(i=1;i<3;i++)
+    {
+        cin>>j;
+        v.push_back(j);
+ 
+        if(v.at(i)<mi)
+        {
+            mi=v.at(i);
+        }
+        if(v.at(i)>ma)
+        {
+            ma=v.at(i);
+        }
+ 
+    }
+ 
+    cout<<ma-mi;
+ 
+}
