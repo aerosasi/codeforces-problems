@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int dist(int);
+int main()
+{
+    ios_base::sync_with_stdio(false);
+ 
+    long long int res,no,i,j,k,len=0;
+ 
+    cin>>no;
+ 
+    res=dist(no);
+    cout<<res;
+}
+ 
+int dist(int n)
+{
+    long long int f,t;
+    if(n%5==0)
+    {
+        return n/5;
+    }
+    else
+    {
+        t=n/5;
+        f=n%5;
+ 
+        if(f<5)
+        {
+            f=1;
+        }
+        return f+t;
+    }
+}
