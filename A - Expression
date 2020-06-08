@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+ 
+    long int i,a,b,c,j,t,res,maxi[51];
+ 
+    cin>>a>>b>>c;
+ 
+    maxi[0]=a+(b*c);
+    maxi[1]=a*(b+c);
+    maxi[2]=a*b*c;
+    maxi[3]=(a+b)*c;
+    maxi[4]=a+b+c;
+    maxi[5]=(a*b)+c;
+ 
+ 
+ 
+    for(i=0;i<5;i++)
+    {
+        for(j=i+1;j<6;j++)
+        {
+ 
+        if(maxi[i]<maxi[j])
+        {
+            t=maxi[i];
+            maxi[i]=maxi[j];
+            maxi[j]=t;
+        }
+ 
+        }
+ 
+    }
+ 
+    cout<<maxi[0];
+ 
+}
