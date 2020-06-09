@@ -1,0 +1,58 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+ 
+    long long int i,j,no,len,flag;
+ 
+ 
+    flag=0;
+ 
+    string s1;
+ 
+    cin>>s1;
+ 
+    len=s1.length();
+ 
+ 
+    char s2[100000];
+    cin>>s2;
+ 
+    string s3;
+ 
+    s3=strrev(s2);
+    if(s1.length()!=s3.length())
+    {
+        flag=1;
+    }
+    else
+    {
+ 
+    for(i=0;i<len;i++)
+    {
+        if(s1[i]!=s3[i])
+        {
+            flag=1;
+            break;
+        }
+    }
+ 
+    }
+    if(flag==0)
+    {
+        cout<<"YES";
+    }
+    else
+    {
+        cout<<"NO";
+    }
+ 
+ 
+    return 0;
+ 
+ 
+ 
+ 
+}
