@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    long long int i,j,no,flag=0;;
+    string s;
+ 
+    long long int numb;
+    cin>>numb;
+ 
+ 
+ 
+   do
+   {
+    flag=0;
+    numb++;
+    stringstream ss;
+    ss<<numb;
+    ss>>s;
+    for(i=0;i<=3;i++)
+    {
+        for(j=i+1;j<=3;j++)
+        {
+          if(s[i]==s[j])
+          {
+             flag=1;
+             break;
+          }
+        }
+ 
+    }
+ 
+ }while(flag==1);
+ cout<<numb;
+ 
+return 0;
+}
